@@ -1,5 +1,6 @@
 import React from "react";
 import { Link } from "react-router-dom";
+import "./css/NavStyles.css";
 
 class Nav extends React.Component {
   render() {
@@ -8,13 +9,13 @@ class Nav extends React.Component {
       height: "40px",
       border: "1px solid black",
       borderRadius: "5px",
-      marginTop: "20px",
+      top: "0",
       position: "absolute",
       right: "10%"
     };
 
     return (
-      <div style={styles}>
+      <div style={styles} className="topNavDiv">
         <p>Nav Component</p>
         <div className="menu">
           <ul>

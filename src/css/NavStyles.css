@@ -1,0 +1,11 @@
+.menu {
+  display: none;
+}
+
+.topNavDiv:hover .menu,
+.menu:hover {
+  display: block;
+  background: white;
+  border: 1px solid grey;
+  margin-top: -10px;
+}

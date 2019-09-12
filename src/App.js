@@ -6,12 +6,14 @@ import BasicInfo from "./views/basic-info";
 import Gender from "./views/gender";
 import Results from "./views/results";
 import { BrowserRouter, Route } from "react-router-dom";
-import Nav from "./nav";
+import Header from "./header";
+import Counter from "./counter";
 
 function App() {
   return (
     <div className="App">
-      <Nav />
+      <Header />
+      <Counter />
       <Route path="/" exact component={Home} />
       <Route path="/basic-info" component={BasicInfo} />
       <Route path="/age" component={Age} />

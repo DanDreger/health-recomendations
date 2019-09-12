@@ -15,8 +15,12 @@ class Home extends React.Component {
     return (
       <div style={styles}>
         <h1>Homepage</h1>
-        <Link to="/basic-info">Advance To Basic Info Page</Link>
-        <Route path="/basic-info" component={BasicInfo} />
+        <form>
+          <button>
+            <Link to="/basic-info">Advance To Basic Info Page</Link>
+            <Route path="/basic-info" component={BasicInfo} />
+          </button>
+        </form>
       </div>
     );
   }
