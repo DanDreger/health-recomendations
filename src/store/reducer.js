@@ -12,20 +12,13 @@ const initialState = {
 // param used is initialState if one is not specified:
 const reducer = (state = initialState, action) => {
   switch (action.type) {
-    case "UPDATE_FIRSTNAME":
+    case "UPDATE_BASIC_INFO":
       return {
-        ...state,
-        firstName: action.value
-      };
-    case "UPDATE_LASTNAME":
-      return {
-        ...state,
-        firstName: action.value
-      };
-    case "UPDATE_EMAIL":
-      return {
-        ...state,
-        email: action.value
+        ...state, 
+          firstName: action.value.firstName,
+          lastName: action.value.lastName,
+          email: action.value.email
+        
       };
     case "UPDATE_AGE":
       return {

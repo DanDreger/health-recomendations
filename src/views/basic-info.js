@@ -1,21 +1,16 @@
 import React from "react";
 import { Link, Route } from "react-router-dom";
+import { connect } from "react-redux";
+
 // import Age from "./age";
 
 class BasicInfo extends React.Component {
   
-  // commented out because Im implementing redux
-  // state = {
-  //   firstName: "",
-  //   lastName: "",
-  //   eMail: "",
-  //   verifyEmail: ""
-  // };
-
-  basicInfoCollect = e => {
-    e.preventDefault();
-    const { firstName, lastName, eMail, verifyEmail } = this.state;
-    console.log(firstName, lastName, eMail, verifyEmail);
+  state = {
+    firstName: "",
+    lastName: "",
+    eMail: "",
+    verifyEmail: ""
   };
 
   handleInputChange = e => {
@@ -34,47 +29,6 @@ class BasicInfo extends React.Component {
       margin: "0 auto"
     };
 
-
-// Map redux state values to props:
-const mapStateToProps = state => {
-  return {
-    firstName: state.firstName,
-    lastName: state.lastName,
-    eMail: state.eMail
-  };
-};
-
-// Dispatch actions/event handlers go here:
-const mapDispatchToProps = dispatch => {
-  return {
-    handleInputChange = e => {
-      console.log("input field name:", e.target.name);
-      this.setState({
-        [e.target.name]: e.target.value
-      });
-    };
-    
-    handleFirstNameChange = e => {
-      dispatch({
-        type: "UPDATE_FIRSTNAME",
-        value: e.target.value
-      })
-    },
-    handleLastNameChange = e => {
-      dispatch({
-        type: "UPDATE_LASTNAME",
-        value: e.target.value
-      })
-    },
-    handleEmailChange = e => {
-      dispatch({
-        type: "UPDATE_EMAIL",
-        value: e.target.value
-      })
-    }
-  };
-};
-
     return (
       <div style={styles}>
         <Link to="/">Back A Page</Link>
@@ -85,7 +39,7 @@ const mapDispatchToProps = dispatch => {
           We will send you a copy of your recommended screenings and preventive
           care.
         </p>
-        <form onSubmit={this.basicInfoCollect}>
+        <form onSubmit={(e)=>this.props.handleInfoClick(e, this.state)}>
           <input
             type="text"
             name="firstName"
@@ -97,7 +51,7 @@ const mapDispatchToProps = dispatch => {
             type="text"
             name="lastName"
             placeholder="Last Name"
-            value={this.state.lName}
+            value={this.state.lastName}
             onChange={this.handleInputChange}
           />
           <input
@@ -125,4 +79,43 @@ const mapDispatchToProps = dispatch => {
   }
 }
 
-export default BasicInfo;
+// Map redux state values to props:
+const mapStateToProps = state => {
+return {
+    firstName: state.firstName,
+    lastName: state.lastName,
+    eMail: state.eMail,
+    verifyEmail: state.verifyEmail
+  };
+};
+
+// Dispatch actions/event handlers go here:
+const mapDispatchToProps = dispatch => {
+  return {
+    handleInfoClick : (e, formData) => {
+      const {firstName, lastName, eMail } = formData;
+      console.log("Handling info click")
+      e.preventDefault();
+      console.log(firstName, lastName, eMail)
+
+      dispatch({
+        type: "UPDATE_BASIC_INFO",
+        value: {
+          firstName: firstName,
+          lastName: lastName,
+          email: eMail
+        }
+      })
+    }
+  }
+};
+
+
+
+// Adding second argument mapDispatchToProps is optional if
+// we are not dispatching actions in this component:
+
+export default connect(
+  mapStateToProps,
+  mapDispatchToProps
+)(BasicInfo);

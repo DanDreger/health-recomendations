@@ -6,8 +6,11 @@ import screenings from "../screenings.json";
 import Screening from "../screening";
 
 class Results extends React.Component {
+  
+
   render() {
     
+
     const allScreenings = screenings.map(screening => {
       return (
         <Screening
@@ -16,6 +19,13 @@ class Results extends React.Component {
         />
       );
     });
+
+    const testFunction = () => {
+      allScreenings.splice(2,5);
+      console.log(allScreenings);
+    }
+    testFunction();
+
     const allRecommendations = recommendations.map(recommendation => {
       return (
         <Recommendation
