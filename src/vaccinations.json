@@ -1,0 +1,30 @@
+[
+  {
+    "id": "hepatitisVaccine",
+    "icon": "https://www.getscreenednow.org/assets/sutc/HepB_Vaccine.svg",
+    "introHeader": "Hepatitis B Vaccine",
+    "introCopy": "Anyone who wants to avoid this liver infection should consider the hepatitis B vaccine. It’s especially important for certain people — find out if you might need it. Learn More.",
+    "headline": "Hepatitis B Vaccine",
+    "colOneHeadline": "WHY IT’S IMPORTANT",
+    "colTwoHeadline": "WHO NEEDS IT",
+    "colThreeHeadline": "GOOD TO KNOW",
+    "colOneCopy": "This vaccine can prevent liver damage due to hepatitis B virus",
+    "colTwoCopy": "Anyone at risk of hepatitis B infection",
+    "colThreeCopy": "The vaccine is a series of three or four shots",
+    "copy": "What is It? The hepatitis B vaccine protects against hepatitis B virus (HBV), which can cause serious liver disease, including liver cancer. That’s why it’s considered the first “anti-cancer” vaccine."
+  },
+  {
+    "id": "hpvVaccine",
+    "icon": "https://www.getscreenednow.org/assets/sutc/HPV_Vaccine.svg",
+    "introHeader": "Human papillomavirus (HPV) Vaccine",
+    "introCopy": "It’s a vaccine that prevents cancer — no brainer! And parents, you’ll want to make sure your preteens or teens have had their shots (boys too!). Learn More.",
+    "headline": "HPV Vaccine",
+    "colOneHeadline": "WHY IT’S IMPORTANT",
+    "colTwoHeadline": "WHO NEEDS IT",
+    "colThreeHeadline": "GOOD TO KNOW",
+    "colOneCopy": "This vaccine can prevent genital warts, cervical cancers, and other cancers",
+    "colTwoCopy": "Younger men (up through age 21) and women (up through age 26), and some others",
+    "colThreeCopy": "Women will still need regular cervical cancer screenings",
+    "copy": "What is It? The HPV vaccine protects against some types of human papillomavirus, the most common sexually transmitted infection (STI) in the United States. It’s so common that nearly everyone will be exposed to HPV at some point in their lives, but many people won’t ever have symptoms. The most common sign of HPV infection is genital warts (in men and women). Less often, some strains of the virus can cause cervical and other cancers."
+  }
+]

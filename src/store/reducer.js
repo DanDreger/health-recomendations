@@ -3,9 +3,9 @@
 const initialState = {
   firstName: "",
   lastName: "",
-  email: "",
+  eMail: "",
   age: "",
-  sex: "",
+  sex: ""
 };
 
 // Function to accept state and actions. Default
@@ -14,11 +14,10 @@ const reducer = (state = initialState, action) => {
   switch (action.type) {
     case "UPDATE_BASIC_INFO":
       return {
-        ...state, 
-          firstName: action.value.firstName,
-          lastName: action.value.lastName,
-          email: action.value.email
-        
+        ...state,
+        firstName: action.value.firstName,
+        lastName: action.value.lastName,
+        eMail: action.value.eMail
       };
     case "UPDATE_AGE":
       return {

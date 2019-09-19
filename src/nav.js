@@ -11,7 +11,9 @@ class Nav extends React.Component {
       borderRadius: "5px",
       top: "0",
       position: "absolute",
-      right: "10%"
+      right: "13%",
+      background: "white",
+      padding: "4px 0 0 0"
     };
 
     return (
@@ -29,7 +31,7 @@ class Nav extends React.Component {
               <Link to="/age">Age</Link>
             </li>
             <li>
-              <Link to="/gender">Gender</Link>
+              <Link to="/sex">Sex</Link>
             </li>
             <li>
               <Link to="/results">Results</Link>

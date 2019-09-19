@@ -4,7 +4,7 @@ import Nav from "./nav";
 class Header extends React.Component {
   render() {
     const styles = {
-      width: "40%"
+      width: "75%"
     };
     return (
       <header>
@@ -12,7 +12,7 @@ class Header extends React.Component {
           <img
             style={styles}
             alt="Rally and Stand up to Cancer Logos"
-            src="https://d37m4c6899pm9g.cloudfront.net/images/sutc/Rally-SUTC-logos.svg"
+            src="https://mydonate.bt.com/images/charities/B19656736181507646989088.jpg"
           />
         </div>
         <Nav />
